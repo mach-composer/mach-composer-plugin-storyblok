@@ -7,7 +7,7 @@
     ],
     "properties": {
         "space_id": {
-            "type": "string"
+            "type": "integer"
         },
         "url": {
             "type": "string"
