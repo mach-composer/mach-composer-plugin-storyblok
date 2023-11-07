@@ -11,7 +11,7 @@ import (
 
 func NewStoryblokPlugin() schema.MachComposerPlugin {
 	state := &Plugin{
-		provider:    "0.3.7",
+		provider:    "0.5.4",
 		siteConfigs: map[string]*StoryblokConfig{},
 	}
 
