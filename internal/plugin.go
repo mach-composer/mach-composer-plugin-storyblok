@@ -126,7 +126,6 @@ func (p *Plugin) TerraformRenderResources(site string) (string, error) {
 		provider "storyblok" {
 			{{ renderProperty "url" .URL }}
 			{{ renderProperty "token" .Token }}
-			{{ renderProperty "space_id" .SpaceID }}
 		}
 	`
 	return helpers.RenderGoTemplate(template, cfg)
