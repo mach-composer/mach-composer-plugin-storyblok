@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "required": [
+        "url",
+        "token"
+    ],
+    "additionalProperties": false,
+    "properties": {
+        "url": {
+            "type": "string"
+        },
+        "token": {
+            "type": "string"
+        }
+    },
+    "description": "Generic Storyblok configuration."
+}

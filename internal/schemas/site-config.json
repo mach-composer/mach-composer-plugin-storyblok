@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "description": "Storyblok settings.",
+    "additionalProperties": false,
+    "required": [
+        "space_id"
+    ],
+    "properties": {
+        "space_id": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string"
+        },
+        "token": {
+            "type": "string"
+        }
+    }
+}
