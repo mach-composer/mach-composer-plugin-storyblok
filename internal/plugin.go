@@ -91,7 +91,7 @@ func (p *Plugin) getSiteConfig(site string) *StoryblokConfig {
 		if cfg.Token != "" {
 			result.Token = cfg.Token
 		}
-		if cfg.SpaceID != "" {
+		if cfg.SpaceID != 0 {
 			result.SpaceID = cfg.SpaceID
 		}
 	}
