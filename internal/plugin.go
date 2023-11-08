@@ -11,7 +11,7 @@ import (
 
 func NewStoryblokPlugin() schema.MachComposerPlugin {
 	state := &Plugin{
-		provider:    "0.3.7",
+		provider:    "0.5.4",
 		siteConfigs: map[string]*StoryblokConfig{},
 	}
 
@@ -91,7 +91,7 @@ func (p *Plugin) getSiteConfig(site string) *StoryblokConfig {
 		if cfg.Token != "" {
 			result.Token = cfg.Token
 		}
-		if cfg.SpaceID != "" {
+		if cfg.SpaceID != 0 {
 			result.SpaceID = cfg.SpaceID
 		}
 	}
@@ -126,7 +126,6 @@ func (p *Plugin) TerraformRenderResources(site string) (string, error) {
 		provider "storyblok" {
 			{{ renderProperty "url" .URL }}
 			{{ renderProperty "token" .Token }}
-			{{ renderProperty "space_id" .SpaceID }}
 		}
 	`
 	return helpers.RenderGoTemplate(template, cfg)
